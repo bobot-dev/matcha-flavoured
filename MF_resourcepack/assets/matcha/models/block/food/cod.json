@@ -1,0 +1,7 @@
+{
+	"parent": "matcha:block/food/template/cod",
+	"textures": {
+		"0": "matcha:item/models/cod",
+		"particle": "minecraft:item/cod"
+	}
+}

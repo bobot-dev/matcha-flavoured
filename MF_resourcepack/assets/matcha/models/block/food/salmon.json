@@ -1,0 +1,7 @@
+{
+	"parent": "matcha:block/food/template/salmon",
+	"textures": {
+		"0": "matcha:item/models/salmon",
+		"particle": "minecraft:item/salmon"
+	}
+}
