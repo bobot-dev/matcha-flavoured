@@ -21,7 +21,7 @@
 				},
 				"effect": {
 					"type": "minecraft:run_function",
-					"function": "matcha:enchantment_effects/adamant_armour"
+					"function": "matcha:enchantment_effects/adamant_effects/doom/add_1_power"
 				}
 			}
 		]

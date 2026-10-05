@@ -5,6 +5,7 @@
 		"color": "#30d2d5"
 	},
 	"supported_items": "#minecraft:head_armor",
+	"exclusive_set": "#matcha:exclusive_set/permanent_effect",
 	"slots": [
 		"head"
 	],

@@ -5,6 +5,10 @@ advancement revoke @s only matcha:mechanics/slept_in_bed
 
 function matcha:mechanics/sleeping/calculate_sleep_duration
 
+# add sleep check so that second or next players are not
+# instantly considered "awake"
+scoreboard players set @s sleepTimerScore -1
+
 # needs to be scheduled because it relies on is_sleeping tag and
 # apparently the tag command takes a tick to apply
 schedule function matcha:mechanics/sleeping/calculate_sleep_rate 1t

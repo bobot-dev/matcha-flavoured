@@ -19,7 +19,7 @@
 				},
 				"effect": {
 					"type": "minecraft:run_function",
-					"function": "matcha:enchantment_effects/cleanse_armor_legs"
+					"function": "matcha:enchantment_effects/shakudo_effects/cleanse/legs"
 				}
 			}
 		]

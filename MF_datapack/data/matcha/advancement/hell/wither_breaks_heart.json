@@ -1,0 +1,30 @@
+{
+	"parent": "matcha:hell/root",
+	"criteria": {
+		"get_heart_broken": {
+			"trigger": "minecraft:impossible"
+		}
+	},
+	"display": {
+		"description": {
+			"translate": "adv.kleispack.hell.wither_breaks_heart.desc",
+			"color": "gray"
+		},
+		"icon": {
+			"components": {
+				"minecraft:item_model": "matcha:heartbreaker"
+			},
+			"count": 1,
+			"id": "minecraft:poisonous_potato"
+		},
+		"title": {
+			"translate": "adv.kleispack.hell.wither_breaks_heart"
+		},
+		"hidden": true
+	},
+	"requirements": [
+		[
+			"get_heart_broken"
+		]
+	]
+}

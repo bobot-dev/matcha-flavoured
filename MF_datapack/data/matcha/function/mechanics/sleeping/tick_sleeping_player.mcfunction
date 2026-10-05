@@ -7,6 +7,12 @@ scoreboard players operation @s sleepDuration -= sleep_rate sleepTimerScore
 execute if score @s sleepDuration matches ..0 \
         run function matcha:mechanics/sleeping/wake_sleeping_player
 
+# if the player just entered a bed, exit and return to normal loop.
+# this is because when another player is already sleeping,
+# the newly asleep one does not get SleepTimer nbt before this 
+# function runs, so they are instantly considered awake.
+execute if entity @s[scores={sleepTimerScore=-1}] run return run scoreboard players add @s sleepTimerScore 2
+
 # if the player is still in bed, nothing left to do. exit.
 execute store result score @s sleepTimerScore run data get entity @s SleepTimer
 execute if entity @s[scores={sleepTimerScore=1..}] run return 0

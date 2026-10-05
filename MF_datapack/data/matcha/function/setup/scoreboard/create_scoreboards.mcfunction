@@ -71,7 +71,6 @@ scoreboard players set 0 traversal 0
 
 # Adamant Armour
 scoreboard objectives add adamant_armour dummy
-scoreboard players set 0 adamant_armour 0
 
 # Shakudo
 scoreboard objectives add shakudo_regen dummy
@@ -115,7 +114,7 @@ scoreboard objectives add wither_timer dummy
 # and it'll never ever fix itself. So if the server crashes, or someone logs out whilst waiting, they will never have a wandering trader arrive :c
 # We will also kill any existing wandering traders, on load. Because again, that'll mess things up
 kill @e[type=minecraft:wandering_trader,tag=summoned_by_beacon]
-execute as @e[type=marker,tag=beacon_kindling] at @s run function matcha:mechanics/wandering_trader/kill_wandering_trader_early
+execute as @e[type=marker,tag=beacon_kindling] at @s run schedule function matcha:mechanics/wandering_trader/kill_wandering_trader_early 1s
 scoreboard objectives add wandering_trader_timer_score dummy
 scoreboard players reset @a wandering_trader_timer_score
 tag @a remove SummonedTrader

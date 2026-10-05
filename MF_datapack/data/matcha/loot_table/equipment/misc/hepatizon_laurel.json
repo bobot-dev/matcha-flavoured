@@ -10,19 +10,25 @@
 					"modifier": {
 						"type": "minecraft:set_components",
 						"components": {
-							"minecraft:item_model": "matcha:ruby_circlet",
+							"minecraft:item_model": "matcha:hepatizon_laurel",
 							"minecraft:equippable": {
 								"slot": "head",
-								"asset_id": "matcha:ruby_circlet"
+								"asset_id": "matcha:hepatizon_laurel"
 							},
 							"minecraft:item_name": {
-								"translate": "item.kleispack.ruby_circlet",
-								"color": "#e63d5f"
+								"translate": "item.kleispack.hepatizon_laurel",
+								"color": "#ac7b5c"
 							},
 							"minecraft:lore": [
 								{
 									"translate": "desc.kleispack.armour",
 									"with":["1"],
+									"color": "dark_green",
+									"italic": false
+								},
+								{
+									"translate": "desc.kleispack.speed_attribute",
+									"with":["+0.1"],
 									"color": "dark_green",
 									"italic": false
 								}
@@ -34,11 +40,15 @@
 									"operation": "add_value",
 									"amount": 1,
 									"slot": "head"
+								},
+								{
+									"id": "bronze_helmet",
+									"type": "minecraft:movement_speed",
+									"operation": "add_value",
+									"amount": 0.1,
+									"slot": "head"
 								}
 							],
-							"minecraft:enchantments": {
-								"matcha:fire_proof": 1
-							},
 							"minecraft:max_stack_size": 1,
 							"!minecraft:consumable": {},
 							"minecraft:tooltip_display": {

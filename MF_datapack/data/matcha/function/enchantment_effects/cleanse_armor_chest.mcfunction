@@ -1,1 +1,0 @@
-execute as @s run effect clear @s minecraft:poison
