@@ -1,7 +1,7 @@
 {
 	"given_item_modifier": [
 		{
-			"decoration": "minecraft:red_x",
+			"decoration": "minecraft:banner_brown",
 			"destination": "#minecraft:on_shipwreck_explorer_maps",
 			"type": "minecraft:exploration_map",
 			"search_radius": 100
@@ -23,6 +23,12 @@
 				"translate": "filled_map.shipwreck"
 			},
 			"target": "item_name"
+		},
+		{
+			"type": "minecraft:set_components",
+			"components": {
+				"minecraft:item_model": "matcha:shipwreck_map"
+			}
 		}
 	],
 	"gives": {
