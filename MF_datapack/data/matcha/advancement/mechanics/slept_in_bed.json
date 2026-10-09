@@ -1,15 +1,33 @@
 {
 	"parent": "matcha:imm_revoke",
 	"criteria": {
-		"slept_in_bed": {
-			"trigger": "minecraft:slept_in_bed"
+		"used_straw_bed": {
+			"trigger": "minecraft:default_block_use",
+			"conditions": {
+				"location": {
+					"type": "minecraft:any_of",
+					"terms": [
+						{
+							"type": "minecraft:location_check",
+							"predicate": {
+								"block": {
+									"blocks": "#minecraft:beds"
+								}
+							}
+						},
+						{
+							"type": "minecraft:location_check",
+							"predicate": {
+								"block": {
+									"blocks": "minecraft:straw_bed"
+								}
+							}
+						}
+					]
+				}
+			}
 		}
 	},
-	"requirements": [
-		[
-			"slept_in_bed"
-		]
-	],
 	"rewards": {
 		"function": "matcha:mechanics/sleeping/on_player_sleep"
 	}

@@ -93,26 +93,34 @@
 				},
 				{
 					"type": "minecraft:item",
-					"modifier": {
-						"type": "minecraft:sequence",
-						"functions": [
-							{
-								"decoration": "minecraft:red_x",
-								"destination": "#minecraft:on_woodland_mansion_maps",
-								"type": "minecraft:exploration_map",
-								"skip_existing_chunks": false,
-								"zoom": 1
+					"modifier": [
+						{
+							"decoration": "minecraft:red_x",
+							"destination": "#minecraft:on_treasure_maps",
+							"type": "minecraft:exploration_map",
+							"skip_existing_chunks": false,
+							"zoom": 1
+						},
+						{
+							"type": "minecraft:filtered",
+							"item_filter": {
+								"predicates": {
+									"minecraft:map_id": {}
+								}
 							},
-							{
-								"type": "minecraft:set_name",
-								"name": {
-									"translate": "filled_map.buried_treasure"
-								},
-								"target": "item_name"
+							"on_fail": {
+								"type": "minecraft:discard"
 							}
-						]
-					},
-					"name": "minecraft:map",
+						},
+						{
+							"type": "minecraft:set_name",
+							"name": {
+								"translate": "filled_map.buried_treasure"
+							},
+							"target": "item_name"
+						}
+					],
+					"name": "minecraft:buried_treasure_map",
 					"weight": 10
 				}
 			],
